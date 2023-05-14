@@ -22,5 +22,14 @@ pipeline{
                 sh 'docker build . -t queydi/django_demo_jenkins:${GIT_COMMIT} -t queydi/django_demo_jenkins:latest'
             }
         }
+        stage ('push'){
+            agent any
+            steps {
+                    withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                        sh 'docker login -u ${USERNAME} -p ${PASSWORD}'
+                        sh 'docker push queydi/django_demo_jenkins:${GIT_COMMIT}'
+                        }
+                }
+        }
     }
   }

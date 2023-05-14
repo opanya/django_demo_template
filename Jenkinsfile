@@ -22,3 +22,5 @@ pipeline{
                 sh 'docker build . -t queydi/django_demo_jenkins:${GIT_COMMIT} -t queydi/django_demo_jenkins:latest'
             }
         }
+    }
+    }

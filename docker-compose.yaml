@@ -4,4 +4,4 @@ services:
   backend:
     image: queydi/django_demo_jenkins:latest
     ports:
-    - "80:88"
+      - "80:88"

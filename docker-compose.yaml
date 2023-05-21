@@ -2,6 +2,6 @@ version: '3'
 
 services:
   backend:
-  image: queydi/django_demo_jenkins:latest
-  ports:
-  - "80:88"
+    image: queydi/django_demo_jenkins:latest
+    ports:
+    - "80:88"

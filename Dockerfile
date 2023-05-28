@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 80
 
-ENTRYPOINT ["uvicorn", "django_demo_site.asgi:application", "--port", "88", "--host", "0.0.0.0"]
+ENTRYPOINT ["uvicorn", "django_demo_site.asgi:application", "--port", "80", "--host", "0.0.0.0"]
